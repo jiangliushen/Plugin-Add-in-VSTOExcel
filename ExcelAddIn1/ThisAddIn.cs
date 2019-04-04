@@ -20,9 +20,9 @@ namespace ExcelAddIn1
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {
         }
-        public ExcelTools.Worksheet GetActiveWorkSheet()
+        public Excel.Workbook GetActiveWorkSheet()
         {
-            return (ExcelTools.Worksheet)Application.ActiveSheet;
+            return Application.ActiveSheet;
         }
 
         #region VSTO generated code

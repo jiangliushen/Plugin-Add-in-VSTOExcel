@@ -16,8 +16,12 @@ namespace ExcelAddIn1
         private void BtnFormPedido_Click(object sender, RibbonControlEventArgs e)
         {
             var Form = new F_USIMNAS();
-            Worksheet currentSheet = Globals.ThisAddIn.GetActiveWorkSheet();
+            var currentSheet = Globals.ThisAddIn.GetActiveWorkSheet();
             Form.Show();
+
+            currentSheet.Range["A1"].Value = "chama o forme";
+            Form.Activate();
+            currentSheet.Range["A2"].Value = "ativa o forme";
         }
     }
 }
